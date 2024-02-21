@@ -1,12 +1,12 @@
 local wezterm = require('wezterm')
 local colors = require('colors.custom')
--- local fonts = require('config.fonts')
+local fonts = require('config.fonts')
 local gpus = wezterm.gui.enumerate_gpus()
 
 return {
    term = 'xterm-256color',
-   animation_fps = 60,
-   max_fps = 60,
+   animation_fps = 144,
+   max_fps = 144,
    webgpu_preferred_adapter = gpus[1],
    front_end = 'WebGpu', -- WebGpu OpenGL
    webgpu_power_preference = 'HighPerformance',
@@ -18,17 +18,17 @@ return {
    -- background
    window_background_opacity = 0.95,
    -- win32_system_backdrop = 'Acrylic',
-   --background = {
-   --   {
-   --      source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
-   --   },
-   --   {
-   --      source = { Color = colors.background },
-   --      height = '100%',
-   --      width = '100%',
-   --      opacity = 0.85,
-   --   },
-   --},
+   background = {
+      {
+         source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
+      },
+      {
+         source = { Color = colors.background },
+         height = '100%',
+         width = '100%',
+         opacity = 0.85,
+      },
+   },
 
    -- scrollbar
    enable_scroll_bar = true,
@@ -56,19 +56,19 @@ return {
    integrated_title_button_style = 'Windows',
    integrated_title_button_color = 'auto',
    integrated_title_button_alignment = 'Right',
-   initial_cols = 120,
-   initial_rows = 24,
-   window_padding = {
-      left = 5,
-      right = 10,
-      top = 12,
-      bottom = 7,
-   },
+   initial_cols = 180,
+   initial_rows = 30,
+   -- window_padding = {
+   --    left = 5,
+   --    right = 10,
+   --    top = 12,
+   --    bottom = 7,
+   -- },
    window_close_confirmation = 'AlwaysPrompt',
    window_frame = {
       active_titlebar_bg = '#090909',
-      -- font = fonts.font,
-      -- font_size = fonts.font_size,
+      font = fonts.font,
+      font_size = fonts.font_size,
    },
    inactive_pane_hsb = { saturation = 1.0, brightness = 1.0 },
 }
