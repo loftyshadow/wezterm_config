@@ -20,7 +20,7 @@ return {
    -- win32_system_backdrop = 'Acrylic',
    background = {
       {
-         source = { File = wezterm.config_dir .. '/backdrops/space.jpg' },
+         source = { File = wezterm.config_dir .. '/backdrops/null.png' },
       },
       {
          source = { Color = colors.background },
