@@ -25,6 +25,8 @@ local keys = {
    -- copy/paste --
    { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo('Clipboard') },
    { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom('Clipboard') },
+   { key = 'Insert', mods = 'CTRL', action = act.CopyTo('Clipboard') },
+   { key = 'Insert', mods = 'SHIFT', action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
@@ -113,7 +115,7 @@ local keys = {
       key = 'R',
       mods = 'CTRL|SHIFT',
       action = act.PromptInputLine({
-         description = 'Enter new name for tab',
+         description = '请输入新的Tab名',
          action = wezterm.action_callback(function(window, pane, line)
             -- line will be `nil` if they hit escape without entering anything
             -- An empty string if they just hit enter

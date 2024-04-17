@@ -58,12 +58,12 @@ return {
    integrated_title_button_alignment = 'Right',
    initial_cols = 180,
    initial_rows = 30,
-   -- window_padding = {
-   --    left = 5,
-   --    right = 10,
-   --    top = 12,
-   --    bottom = 7,
-   -- },
+   window_padding = {
+      left = 2,
+      right = 2,
+      top = 0,
+      bottom = 1,
+   },
    window_close_confirmation = 'AlwaysPrompt',
    window_frame = {
       active_titlebar_bg = '#090909',

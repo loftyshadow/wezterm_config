@@ -18,7 +18,7 @@ M.cells = {}
 M.colors = {
 
    default = {
-      bg = '#7F82BB',
+      bg = '#767676',
       fg = '#0F2536',
    },
 
@@ -45,9 +45,9 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
    if process_name:len() > 0 and static_title:len() == 0 then
       title = '  ' .. process_name .. ' ~ ' .. ' '
    elseif static_title:len() > 0 then
-      title = '󰴈  ' .. static_title .. ' ~ ' .. ' '
-   else
       title = '󰌽  ' .. active_title .. ' ~ ' .. ' '
+   else
+      title = '󰴈  ' .. static_title .. ' ~ ' .. ' '
    end
 
    if title:len() > max_width - inset then
@@ -124,7 +124,7 @@ M.setup = function()
 
       -- Unseen output alert
       if has_unseen_output then
-         M.push(bg, '#FF3B8B', { Intensity = 'Bold' }, ' ' .. GLYPH_CIRCLE)
+         M.push(bg, '#313244"', { Intensity = 'Bold' }, ' ' .. GLYPH_CIRCLE)
       end
 
       -- Right padding

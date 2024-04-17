@@ -7,7 +7,7 @@ M.separator_char = ' '
 M.colors = {
    date_fg = '#7F82BB',
    date_bg = '#0F2536',
-   battery_fg = '#BB49B3',
+   battery_fg = '#A6E3A1',
    battery_bg = '#0F2536',
    separator_fg = '#786D22',
    separator_bg = '#0F2536',
@@ -42,7 +42,8 @@ end
 
 M.set_battery = function()
    -- ref: https://wezfurlong.org/wezterm/config/lua/wezterm/battery_info.html
-   local discharging_icons = { '', '', '', '', '', '', '', '', '', '' }
+   local discharging_icons =
+      { '', '', '', '', '', '', '', '', '', '' }
    local charging_icons = { '', '', '', '', '', '', '', '', '', '' }
 
    local charge = ''
