@@ -43,9 +43,9 @@ M.set_title = function(process_name, static_title, active_title, max_width, inse
    inset = inset or 6
 
    if process_name:len() > 0 and static_title:len() == 0 then
-      title = '  ' .. process_name .. ' ~ ' .. ' '
+      title = '🦝 ' .. process_name .. ' ~ ' .. ' '
    elseif static_title:len() > 0 then
-      title = '󰌽  ' .. active_title .. ' ~ ' .. ' '
+      title = '  ' .. active_title .. ' ~ ' .. ' '
    else
       title = '󰴈  ' .. static_title .. ' ~ ' .. ' '
    end
